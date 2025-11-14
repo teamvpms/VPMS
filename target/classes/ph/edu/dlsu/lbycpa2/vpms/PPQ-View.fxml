@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10"
+      stylesheets="@VPMS-style.css"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ph.edu.dlsu.lbycpa2.vpms.PatientPriorityQueueController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Patient Priority Queue (Max Heap)"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <TextField fx:id="txtPatient" promptText="Patient name"/>
+        <TextField fx:id="txtPriority" promptText="Priority (1–10, 10 = highest)"/>
+    </HBox>
+
+    <Button text="Add Patient" fx:id="btnAdd"/>
+    <Button text="Serve Highest Priority" fx:id="btnServe"/>
+
+    <ListView fx:id="listQueue" prefHeight="250"/>
+
+</VBox>

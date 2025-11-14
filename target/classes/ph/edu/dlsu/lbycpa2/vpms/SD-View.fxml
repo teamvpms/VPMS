@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10"
+      stylesheets="@VPMS-style.css"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ph.edu.dlsu.lbycpa2.vpms.StaffDirectoryController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Staff Directory (BST)"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <TextField fx:id="txtName" promptText="Name / Position / Specialization"/>
+        <Button text="Insert" fx:id="btnInsert"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Search" fx:id="btnSearch"/>
+        <Button text="Show Inorder" fx:id="btnInorder"/>
+        <Button text="Show Preorder" fx:id="btnPreorder"/>
+        <Button text="Show Postorder" fx:id="btnPostorder"/>
+    </HBox>
+
+    <ListView fx:id="listOutput" prefHeight="250"/>
+
+</VBox>
