@@ -8,7 +8,7 @@
         xmlns="http://javafx.com/javafx/8"
         xmlns:fx="http://javafx.com/fxml"
         stylesheets="@VPMS-style.css"
-        fx:controller="ph.edu.dlsu.lbycpa2.vpms.MainController">
+        fx:controller="ph.edu.dlsu.lbycpa2.vpms.controllers.MainController">
 
     <top>
         <Label text="Velasco Hospital Management System"
