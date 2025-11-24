@@ -193,8 +193,7 @@ public class ResourceAllocator {
         }
 
         // 2) Specialty check
-        if (!room.getSpecialty().equalsIgnoreCase("NONE") &&
-                !room.getSpecialty().equalsIgnoreCase("ICU") &&
+        if (!room.getSpecialty().equals(room.getSpecialty().toUpperCase()) &&
                 !room.getSpecialty().equalsIgnoreCase(staff.getSpecialty())) {
 
             return "Room requires a " + room.getSpecialty() +

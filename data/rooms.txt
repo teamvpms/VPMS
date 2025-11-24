@@ -1,10 +1,40 @@
-Room 101 - ICU
-Room 102 - Surgeon
-Room 201 - Cardiologist
-Room 202 - Cardiologist
+Room 101 - RECEPTION
+Room 102 - ICU
+Room 103 - ICU
+Room 104 - Surgeon
+Room 105 - Surgeon
+Room 106 - General Practitioner
+Room 107 - General Practitioner
+Room 108 - Nurse station
+Room 109 - WARD ROOM
+Room 110 - WARD ROOM
+Room 201 - Surgeon
+Room 202 - Surgeon
+Room 203 - Radiologist
+Room 204 - Radiologist
+Room 205 - XRAY ROOM
+Room 206 - XRAY ROOM
+Room 207 - Nurse station
+Room 208 - WARD ROOM
+Room 209 - WARD ROOM
+Room 210 - WARD ROOM
 Room 301 - Pediatrician
-Room 401 - Radiologist
-Room 402 - Radiologist
-Room 501 - General Practitioner
-Room 601 - NONE
-Room 602 - NONE
+Room 302 - Pediatrician
+Room 303 - Cardiologist
+Room 304 - Cardiologist
+Room 305 - Neurologist
+Room 306 - Neurologist
+Room 307 - Oncologist
+Room 308 - Oncologist
+Room 309 - WARD ROOM
+Room 310 - WARD ROOM
+Room 401 - Ophthalmologist
+Room 402 - Dermatologist
+Room 403 - Psychiatrist
+Room 404 - Nephrologist
+Room 405 - WARD ROOM
+Room 406 - WARD ROOM
+Room 407 - WARD ROOM
+Room 408 - WARD ROOM
+Room 409 - WARD ROOM
+Room 410 - WARD ROOM

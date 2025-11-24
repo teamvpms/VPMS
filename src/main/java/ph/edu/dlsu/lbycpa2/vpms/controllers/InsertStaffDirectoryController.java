@@ -27,16 +27,15 @@ public class InsertStaffDirectoryController {
         return cmp != 0 ? cmp : a.toString().compareToIgnoreCase(b.toString());
     });
 
-    private static final Path FILE_PATH = Paths.get("src", "main", "java",
-            "ph", "edu", "dlsu", "lbycpa2", "vpms", "data", "staff.txt");
+    private static final Path STAFF_FILE = Paths.get("data/staff.txt");
 
     private static final String[] VALID_RANKS = {
-            "Intern", "Junior", "Senior", "Nurse","Consultant", "Head of Department", "CEO"
+            "Intern", "Junior", "Senior", "Nurse","Consultant", "Head of Department"
     };
     private static final String[] VALID_SPECIALTIES = {
             "Cardiologist", "Neurologist", "Pediatrician", "Surgeon",
             "Anesthesiologist", "Radiologist", "Oncologist", "Dermatologist",
-            "General Practitioner", "NONE"
+            "General Practitioner", "Ophthalmologist", "Psychiatrist", "Nephrologist", "NONE"
     };
 
     @FXML
@@ -53,24 +52,24 @@ public class InsertStaffDirectoryController {
     // FILE HANDLING
     private void loadStaffFromFile() {
         try {
-            if (Files.notExists(FILE_PATH.getParent())) {
+            if (Files.notExists(STAFF_FILE.getParent())) {
                 try {
-                    Files.createDirectories(FILE_PATH.getParent());
+                    Files.createDirectories(STAFF_FILE.getParent());
                 } catch (IOException ex) {
                     listOutput.getItems().add("Could not create directories: " + ex.getMessage());
                     return;
                 }
             }
 
-            if (Files.notExists(FILE_PATH)) {
+            if (Files.notExists(STAFF_FILE)) {
                 // create empty file
-                Files.createFile(FILE_PATH);
-                listOutput.getItems().add("Created staff file at: " + FILE_PATH.toString());
+                Files.createFile(STAFF_FILE);
+                listOutput.getItems().add("Created staff file at: " + STAFF_FILE.toString());
                 return;
             }
 
             // Read file (each line in format: Name - Role - Rank)
-            Files.lines(FILE_PATH, StandardCharsets.UTF_8)
+            Files.lines(STAFF_FILE, StandardCharsets.UTF_8)
                     .map(String::trim)
                     .filter(line -> !line.isEmpty())
                     .forEach(line -> {
@@ -105,7 +104,7 @@ public class InsertStaffDirectoryController {
     private void appendStaffToFile(Staff s) {
         // append in UTF-8, create file if missing
         try (BufferedWriter writer = Files.newBufferedWriter(
-                FILE_PATH,
+                STAFF_FILE,
                 StandardCharsets.UTF_8,
                 StandardOpenOption.CREATE,
                 StandardOpenOption.APPEND

@@ -21,10 +21,10 @@ public class DynamicResourceAllocationController {
 
     private ResourceAllocator allocator;
 
-    private static final Path STAFF_FILE = Paths.get("src/main/java/ph/edu/dlsu/lbycpa2/vpms/data/staff.txt");
-    private static final Path ROOM_FILE = Paths.get("src/main/java/ph/edu/dlsu/lbycpa2/vpms/data/rooms.txt");
-    private static final Path ASSIGN_TRACKER_FILE = Paths.get("src/main/java/ph/edu/dlsu/lbycpa2/vpms/data/assignment tracker.txt");
-    private static final Path ASSIGN_FILE = Paths.get("src/main/java/ph/edu/dlsu/lbycpa2/vpms/data/assignments.txt");
+    private static final Path STAFF_FILE = Paths.get("data/staff.txt");
+    private static final Path ROOM_FILE = Paths.get("data/rooms.txt");
+    private static final Path ASSIGN_TRACKER_FILE = Paths.get("data/assignment tracker.txt");
+    private static final Path ASSIGN_FILE = Paths.get("data/assignments.txt");
 
     @FXML
     public void initialize() {
